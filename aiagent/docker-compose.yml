@@ -1,4 +1,6 @@
 services:
   aiagent:
     build: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     entrypoint: ["bash", "-c", "sleep infinity"]
